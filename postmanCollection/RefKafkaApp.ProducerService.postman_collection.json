@@ -1,0 +1,58 @@
+{
+	"info": {
+		"_postman_id": "fba3c17c-5d6b-419c-8d7c-db3ad53d147a",
+		"name": "RefKafkaApp.ProducerService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "923648"
+	},
+	"item": [
+		{
+			"name": "ProducerConfig",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:{{portNumberProducer}}/config",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{portNumberProducer}}",
+					"path": [
+						"config"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ProduceMessage",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Key\": \"12345\",\r\n    \"Value\": \"Hello 22\"\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:{{portNumberProducer}}/messages",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{portNumberProducer}}",
+					"path": [
+						"messages"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
