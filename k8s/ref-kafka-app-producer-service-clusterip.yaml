@@ -2,8 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: ref-kafka-app-producer-deployment
-  name: ref-kafka-app-producer-deployment
+    app: ref-kafka-app-producer-service-clusterip
+  name: ref-kafka-app-producer-service-clusterip
 spec:
   ports:
   - port: 80
